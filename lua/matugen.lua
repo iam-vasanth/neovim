@@ -24,6 +24,32 @@ function M.setup()
     vim.api.nvim_set_hl(0, group, opts)
   end
 
+  local colors = {
+    bg = '#000000',
+    fg = '#e2e2e2',
+    primary = '#ffffff',
+    surface1 = '#131313',
+  }
+  local lualine_ok, lualine = pcall(require, 'lualine')
+  if lualine_ok then
+    lualine.setup({
+      options = {
+        theme = {
+          normal = {
+            a = { bg = colors.primary, fg = colors.bg, gui = 'bold' },
+            b = { bg = colors.surface1, fg = colors.fg },
+            c = { bg = colors.bg, fg = colors.fg },
+          },
+          inactive = {
+            a = { bg = colors.surface1, fg = colors.fg },
+            b = { bg = colors.surface1, fg = colors.fg },
+            c = { bg = colors.bg, fg = colors.fg },
+          },
+        },
+      },
+    })
+  end
+
   -- Telescope
   hi('TelescopeNormal',         { fg = '#e2e2e2',          bg = '#000000' })
   hi('TelescopeBorder',         { fg = '#919191',             bg = '#000000' })
@@ -49,6 +75,21 @@ function M.setup()
   hi('SnacksDashboardDir',     { fg = '#474747', bg = '#000000' })
   hi('SnacksDashboardFile',    { fg = '#e2e2e2',      bg = '#000000' })
   hi('SnacksDashboardSpecial', { fg = '#1b1b1b',      bg = '#000000' })
+
+-- Neo-tree
+  hi('NeoTreeNormal',       { fg = '#e2e2e2', bg = '#000000' })
+  hi('NeoTreeNormalNC',     { fg = '#e2e2e2', bg = '#000000' })
+  hi('NeoTreeWinSeparator', { fg = '#919191', bg = '#000000' })
+
+  -- Snacks explorer
+  hi('SnacksNormal',       { fg = '#e2e2e2', bg = '#000000' })
+  hi('SnacksNormalNC',     { fg = '#e2e2e2', bg = '#000000' })
+  hi('SnacksWinBar',       { fg = '#e2e2e2', bg = '#000000' })
+
+  -- Generic window separators / statusline fallback
+  hi('WinSeparator', { fg = '#919191' })
+  hi('StatusLine',   { fg = '#e2e2e2', bg = '#000000' })
+  hi('StatusLineNC', { fg = '#919191',    bg = '#000000' })
 end
 
  -- Register a signal handler for SIGUSR1 (matugen updates)
