@@ -24,7 +24,6 @@ function M.setup()
     vim.api.nvim_set_hl(0, group, opts)
   end
 
-  -- Telescope
   hi('TelescopeNormal',         { fg = '#e2e2e2',          bg = '#000000' })
   hi('TelescopeBorder',         { fg = '#919191',             bg = '#000000' })
   hi('TelescopePromptNormal',   { fg = '#e2e2e2',          bg = '#000000' })
@@ -36,19 +35,18 @@ function M.setup()
   hi('TelescopeResultsTitle',   { fg = '#000000',             bg = '#e2e2e2' })
   hi('TelescopeSelection',      { fg = '#e2e2e2',          bg = '#1e1e1e' })
   hi('TelescopeSelectionCaret', { fg = '#ffffff',             bg = '#1e1e1e' })
-  hi('TelescopeMatching', { fg = '#ffffff', bold = true })
+  hi('TelescopeMatching',       { fg = '#ffffff',             bold = true })
 
-  -- Snacks dashboard
-  hi('SnacksDashboardHeader',  { fg = '#474747', bg = '#000000' })
-  hi('SnacksDashboardDesc',    { fg = '#e2e2e2',      bg = '#000000' })
-  hi('SnacksDashboardIcon',    { fg = '#1b1b1b',      bg = '#000000' })
-  hi('SnacksDashboardKey',     { fg = '#ffb4ab',           bg = '#000000' })
-  hi('SnacksDashboardFooter',  { fg = '#919191',         bg = '#000000' })
-  hi('SnacksDashboardTitle',   { fg = '#e2e2e2',      bg = '#000000', bold = true })
-  hi('SnacksDashboardNormal',  { fg = '#e2e2e2',      bg = '#000000' })
-  hi('SnacksDashboardDir',     { fg = '#474747', bg = '#000000' })
-  hi('SnacksDashboardFile',    { fg = '#e2e2e2',      bg = '#000000' })
-  hi('SnacksDashboardSpecial', { fg = '#1b1b1b',      bg = '#000000' })
+  hi('SnacksDashboardHeader', { fg = '#c6c6c6', bg = '#000000' })
+  hi('SnacksDashboardDesc',   { fg = '#e2e2e2', bg = '#000000' })
+  hi('SnacksDashboardIcon',   { fg = '#ffffff', bg = '#000000' })
+  hi('SnacksDashboardKey',    { fg = '#ffb4ab', bg = '#000000' })
+  hi('SnacksDashboardFooter', { fg = '#919191', bg = '#000000' })
+  hi('SnacksDashboardTitle',  { fg = '#e2e2e2', bg = '#000000', bold = true })
+  hi('SnacksDashboardNormal', { fg = '#e2e2e2', bg = '#000000' })
+  hi('SnacksDashboardDir',    { fg = '#c6c6c6', bg = '#000000' })
+  hi('SnacksDashboardFile',   { fg = '#e2e2e2', bg = '#000000' })
+  hi('SnacksDashboardSpecial', { fg = '#ffffff', bg = '#000000' })
 end
 
  -- Register a signal handler for SIGUSR1 (matugen updates)
